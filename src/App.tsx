@@ -65,7 +65,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-red-600 selection:text-white pb-16 sm:pb-0">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-red-600 selection:text-white pb-16 sm:pb-0 w-full max-w-full overflow-x-hidden">
       {/* Sticky Top Navigation */}
       <Navbar 
         onOpenEstimateModal={handleOpenEstimateModal}

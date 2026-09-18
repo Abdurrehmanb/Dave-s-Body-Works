@@ -26,25 +26,25 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   // Responsive size constraints for official emblem image
   const emblemSizes = {
     xs: 'w-6 h-6 sm:w-7 sm:h-7',
-    sm: 'w-7 h-7 sm:w-8 sm:h-8',
-    md: compact ? 'w-8 h-8 sm:w-9 sm:h-9' : 'w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10',
+    sm: compact ? 'w-6.5 h-6.5 sm:w-7.5 sm:h-7.5' : 'w-7 h-7 sm:w-8 sm:h-8',
+    md: compact ? 'w-7.5 h-7.5 sm:w-9 sm:h-9' : 'w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10',
     lg: 'w-11 h-11 sm:w-13 sm:h-13 md:w-14 md:h-14',
     xl: 'w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20'
   }[size];
 
   // Headings scaled specifically for balanced density
   const headingClass = {
-    xs: 'text-xs font-black tracking-tight',
-    sm: 'text-xs sm:text-sm font-black tracking-tight',
+    xs: 'text-[11px] font-black tracking-tight',
+    sm: compact ? 'text-[12px] sm:text-sm font-black tracking-tight' : 'text-xs sm:text-sm font-black tracking-tight',
     md: compact ? 'text-xs sm:text-sm font-black tracking-tight' : 'text-xs xs:text-sm sm:text-[15px] font-black tracking-tight',
     lg: 'text-sm sm:text-base md:text-lg font-black tracking-tight',
     xl: 'text-base sm:text-lg md:text-xl font-black tracking-tight'
   }[size];
 
   const subtitleClass = {
-    xs: 'text-[7px] font-semibold tracking-wider uppercase',
-    sm: 'text-[7.5px] sm:text-[8px] font-semibold tracking-wider uppercase',
-    md: compact ? 'text-[7.5px] sm:text-[8px] font-semibold tracking-wider uppercase' : 'text-[7.5px] xs:text-[8px] sm:text-[8.5px] font-semibold tracking-wider uppercase',
+    xs: 'text-[6.5px] font-semibold tracking-wider uppercase',
+    sm: compact ? 'text-[7px] sm:text-[7.5px] font-semibold tracking-wider uppercase' : 'text-[7.5px] sm:text-[8px] font-semibold tracking-wider uppercase',
+    md: compact ? 'text-[7px] sm:text-[7.5px] font-semibold tracking-wider uppercase' : 'text-[7.5px] xs:text-[8px] sm:text-[8.5px] font-semibold tracking-wider uppercase',
     lg: 'text-[8.5px] sm:text-[9.5px] font-semibold tracking-wider uppercase',
     xl: 'text-[9.5px] sm:text-[10.5px] font-semibold tracking-wider uppercase'
   }[size];
@@ -93,7 +93,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   // Horizontal Full Lockup (Default)
   return (
-    <div className={`inline-flex items-center gap-2 sm:gap-3 select-none shrink-0 ${className}`}>
+    <div className={`inline-flex items-center gap-1.5 sm:gap-2.5 select-none ${compact ? 'min-w-0' : 'shrink-0'} ${className}`}>
       {/* Official Transparent Logo Image */}
       <div className="relative shrink-0 flex items-center justify-center">
         <div className={`flex items-center justify-center rounded-xl transition-transform hover:scale-105 duration-200 ${

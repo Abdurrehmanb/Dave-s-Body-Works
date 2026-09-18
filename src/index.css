@@ -16,12 +16,24 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
   }
 
-  /* Prevent horizontal scroll on small mobile viewports */
+  /* Prevent horizontal scroll and zoom gutters on mobile viewports */
   body {
     overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
     touch-action: manipulation;
+    position: relative;
+  }
+
+  #root {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
   }
 }
 

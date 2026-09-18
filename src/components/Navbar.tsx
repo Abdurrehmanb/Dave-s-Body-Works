@@ -62,13 +62,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimateModal, onScrollToS
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-slate-200 shadow-xs w-full max-w-full overflow-x-clip">
       {/* Top Official Brand Banner */}
-      <div className="bg-[#0b1a30] text-slate-200 text-xs py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-800">
+      <div className="bg-[#0b1a30] text-slate-200 text-xs py-1.5 sm:py-2 px-3 sm:px-4 border-b border-slate-800 w-full">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
           {/* Left info items */}
-          <div className="flex items-center flex-wrap gap-2 sm:gap-3.5 text-[11px] sm:text-xs">
-            <span className="inline-flex items-center gap-1 font-bold text-amber-400">
+          <div className="flex items-center flex-wrap gap-2 sm:gap-3.5 text-[11px] sm:text-xs min-w-0">
+            <span className="inline-flex items-center gap-1 font-bold text-amber-400 shrink-0">
               <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-amber-400 text-amber-400 shrink-0" />
               <span className="hidden sm:inline">4.7 Rating (54 Google Reviews)</span>
               <span className="sm:hidden">4.7★ (54 Reviews)</span>
@@ -81,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimateModal, onScrollToS
             </span>
 
             <span className="hidden sm:inline-block text-slate-600">|</span>
-            <div className="inline-flex items-center gap-1.5">
+            <div className="inline-flex items-center gap-1.5 shrink-0">
               <span className={`w-2 h-2 rounded-full shrink-0 ${isOpenNow ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`} />
               <span className="text-slate-300 font-medium text-[10px] sm:text-xs">
                 {isOpenNow ? 'Open Now · Closes 5 PM' : 'Closed · Opens 8 AM'}
@@ -111,12 +111,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimateModal, onScrollToS
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-4 xl:px-6">
-        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-18 gap-2">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-4 xl:px-6 w-full">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-18 gap-1.5 sm:gap-2 min-w-0">
           {/* Official Transparent Brand Logo - Compact Size */}
           <button 
             onClick={() => handleNavClick('hero')} 
-            className="text-left focus:outline-none cursor-pointer py-1 shrink-0"
+            className="text-left focus:outline-none cursor-pointer py-1 min-w-0 shrink"
             title="Dave's Body Works Home"
           >
             <BrandLogo variant="horizontal" size="sm" theme="light" showTagline={false} showRating={false} compact={true} />
@@ -188,17 +188,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimateModal, onScrollToS
 
           {/* Mobile Action CTAs + Hamburger (Visible on < 640px) */}
           <div className="flex sm:hidden items-center gap-1.5 shrink-0">
-            <a
-              href={`tel:${SHOP_INFO.phone}`}
-              className="w-9 h-9 text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg flex items-center justify-center shrink-0 transition-colors"
-              title="Call Shop: (702) 871-0556"
-            >
-              <Phone className="w-4 h-4 text-red-600 fill-red-600" />
-            </a>
-
             <button
               onClick={onOpenEstimateModal}
-              className="h-9 px-2.5 text-xs font-bold text-white bg-red-600 hover:bg-red-700 active:bg-red-800 rounded-lg shadow-xs flex items-center gap-1 cursor-pointer uppercase tracking-wider whitespace-nowrap shrink-0"
+              className="h-8.5 px-2.5 text-xs font-bold text-white bg-red-600 hover:bg-red-700 active:bg-red-800 rounded-lg shadow-xs flex items-center gap-1 cursor-pointer uppercase tracking-wider whitespace-nowrap shrink-0"
             >
               <Calculator className="w-3.5 h-3.5 text-white" />
               <span>Estimate</span>
@@ -206,7 +198,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimateModal, onScrollToS
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="w-9 h-9 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none cursor-pointer shrink-0"
+              className="w-9 h-9 flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 active:bg-slate-200 focus:outline-none cursor-pointer shrink-0"
               aria-label="Toggle navigation menu"
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -217,7 +209,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimateModal, onScrollToS
 
       {/* Mobile & Tablet Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl max-h-[85vh] overflow-y-auto">
+        <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl max-h-[85vh] overflow-y-auto w-full max-w-full">
           {/* Navigation Links */}
           <div className="space-y-1">
             {navLinks.map((link) => (
@@ -255,9 +247,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimateModal, onScrollToS
               <span>Request Free Estimate</span>
             </button>
 
-            <div className="pt-2 flex items-center justify-between text-xs text-slate-500 px-1">
+            <div className="pt-2 flex items-center justify-between text-xs text-slate-500 px-1 flex-wrap gap-2">
               <span className="flex items-center gap-1">
-                <MapPin className="w-3.5 h-3.5 text-red-500" />
+                <MapPin className="w-3.5 h-3.5 text-red-500 shrink-0" />
                 <span>3480 W Spring Mountain Rd</span>
               </span>
               <span className="font-semibold text-slate-700">Mon-Fri: 8am-5pm</span>
