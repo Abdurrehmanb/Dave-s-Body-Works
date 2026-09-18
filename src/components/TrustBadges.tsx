@@ -56,7 +56,9 @@ export const TrustBadges: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="group relative bg-[#0e213d]/80 hover:bg-[#132c52] border border-slate-700/60 hover:border-red-500/60 rounded-xl p-3.5 sm:p-4 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-lg hover:shadow-red-600/10 hover:-translate-y-0.5"
+                className={`group relative bg-[#0e213d]/80 hover:bg-[#132c52] border border-slate-700/60 hover:border-red-500/60 rounded-xl p-3.5 sm:p-4 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-lg hover:shadow-red-600/10 hover:-translate-y-0.5 ${
+                  idx === 4 ? 'col-span-2 sm:col-span-1' : ''
+                }`}
               >
                 {/* Top Badge Tag */}
                 <div className="flex items-center justify-between gap-2 mb-2">

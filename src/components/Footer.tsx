@@ -30,14 +30,20 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenEstimat
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
           {/* Column 1: Official Brand & Identity (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <BrandLogo variant="horizontal" theme="dark" size="md" />
+            <button 
+              onClick={scrollToTop} 
+              className="text-left focus:outline-none cursor-pointer"
+              title="Return to top"
+            >
+              <BrandLogo variant="horizontal" theme="dark" size="md" showTagline={true} showRating={false} />
+            </button>
 
-            <p className="text-xs text-slate-400 leading-relaxed pt-2">
-              Family owned and trusted by Las Vegas drivers for honest diagnostics, certified bumper replacement, precision color matching, and complete insurance claim handling.
+            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
+              Family owned and trusted by Las Vegas drivers since 1980 for honest diagnostics, certified bumper replacement, precision color matching, and complete insurance claim handling.
             </p>
 
-            <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#0b1a30] border border-slate-800 text-xs text-slate-300">
-              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+            <div className="inline-flex items-center gap-2 p-2.5 rounded-xl bg-[#0b1a30] border border-slate-800 text-xs text-slate-300 shadow-xs">
+              <Star className="w-4 h-4 fill-amber-400 text-amber-400 shrink-0" />
               <span className="font-bold text-white">4.7 Stars</span>
               <span className="text-slate-500">·</span>
               <span>54 Verified Google Reviews</span>

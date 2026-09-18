@@ -2,5 +2,7 @@
   "name": "Dave's Body Works",
   "description": "Las Vegas family-owned auto body and collision repair shop. Certified bumper replacement, paint matching, dent repair, insurance claims assistance, and free estimates.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
