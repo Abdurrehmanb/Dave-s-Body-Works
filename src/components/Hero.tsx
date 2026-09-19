@@ -92,26 +92,26 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimateModal, onScrollToSecti
             </div>
 
             {/* Primary Action Buttons (Responsive & Snappy) */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+            <div className="pt-2 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3">
               <button
                 onClick={onOpenEstimateModal}
-                className="w-full sm:w-auto px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-red-600 hover:bg-red-500 active:scale-[0.99] text-white font-extrabold text-xs sm:text-sm md:text-base shadow-lg shadow-red-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider min-h-[48px]"
+                className="w-full sm:w-auto px-4 sm:px-4 lg:px-3.5 xl:px-5 py-3 sm:py-3.5 rounded-xl bg-red-600 hover:bg-red-500 active:scale-[0.99] text-white font-extrabold text-xs sm:text-xs md:text-sm lg:text-xs xl:text-sm shadow-lg shadow-red-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wide whitespace-nowrap min-h-[48px]"
               >
-                <Camera className="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0" />
+                <Camera className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white shrink-0" />
                 <span>Upload Photos for Free Estimate</span>
               </button>
 
               <button
                 onClick={() => onScrollToSection('calculator')}
-                className="w-full sm:w-auto px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl bg-[#152c50]/90 hover:bg-[#1c3866] active:scale-[0.99] text-white font-bold text-xs sm:text-sm md:text-base border border-blue-400/30 transition-all flex items-center justify-center gap-2 cursor-pointer min-h-[48px]"
+                className="w-full sm:w-auto px-4 sm:px-4 lg:px-3.5 xl:px-4 py-3 sm:py-3.5 rounded-xl bg-[#152c50]/90 hover:bg-[#1c3866] active:scale-[0.99] text-white font-bold text-xs sm:text-xs md:text-sm lg:text-xs xl:text-sm border border-blue-400/30 transition-all flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap min-h-[48px]"
               >
-                <Calculator className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 shrink-0" />
+                <Calculator className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>Calculate Cost Range</span>
               </button>
 
               <a
                 href={`tel:${SHOP_INFO.phone}`}
-                className="w-full sm:w-auto px-4 py-3.5 sm:py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 active:scale-[0.99] text-slate-100 hover:text-white font-bold text-xs sm:text-sm border border-slate-700 transition-all flex items-center justify-center gap-2 min-h-[48px]"
+                className="w-full sm:w-auto px-4 sm:px-3.5 lg:px-3 xl:px-4 py-3 sm:py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 active:scale-[0.99] text-slate-100 hover:text-white font-bold text-xs sm:text-xs md:text-sm lg:text-xs xl:text-sm border border-slate-700 transition-all flex items-center justify-center gap-2 whitespace-nowrap min-h-[48px]"
               >
                 <Phone className="w-4 h-4 text-red-400 fill-red-400 shrink-0" />
                 <span>(702) 871-0556</span>
