@@ -10,6 +10,7 @@ import { LocationHoursSection } from './components/LocationHoursSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { EstimateModal } from './components/EstimateModal';
+import { BackToTopButton } from './components/BackToTopButton';
 import { Phone, Camera } from 'lucide-react';
 import { SHOP_INFO } from './data';
 
@@ -118,6 +119,9 @@ export default function App() {
         onClose={() => setIsEstimateModalOpen(false)}
         initialData={modalInitialData}
       />
+
+      {/* Floating Back to Top Button */}
+      <BackToTopButton />
 
       {/* Persistent Mobile Bottom Action Bar (visible on mobile screens < 640px) */}
       <div className="fixed bottom-0 inset-x-0 z-40 bg-[#0b1a30]/95 backdrop-blur-md border-t border-slate-800 p-2.5 sm:hidden flex items-center gap-2 shadow-2xl">
