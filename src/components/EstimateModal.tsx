@@ -406,7 +406,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({
                     key={t.id}
                     type="button"
                     onClick={() => setInsuranceStatus(t.id as any)}
-                    className={`py-2 px-3 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
+                    className={`min-h-[42px] py-2.5 px-3 rounded-xl border text-xs font-bold transition-all cursor-pointer flex items-center justify-center text-center ${
                       insuranceStatus === t.id
                         ? 'border-red-600 bg-red-50 text-red-700 ring-1 ring-red-600'
                         : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'

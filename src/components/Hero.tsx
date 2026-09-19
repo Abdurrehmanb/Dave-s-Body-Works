@@ -92,28 +92,28 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEstimateModal, onScrollToSecti
             </div>
 
             {/* Primary Action Buttons (Responsive & Snappy) */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
               <button
                 onClick={onOpenEstimateModal}
-                className="px-6 py-4 rounded-xl bg-red-600 hover:bg-red-500 active:scale-[0.99] text-white font-extrabold text-sm sm:text-base shadow-lg shadow-red-600/30 transition-all flex items-center justify-center gap-2.5 cursor-pointer uppercase tracking-wider"
+                className="w-full sm:w-auto px-4 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-red-600 hover:bg-red-500 active:scale-[0.99] text-white font-extrabold text-xs sm:text-sm md:text-base shadow-lg shadow-red-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider min-h-[48px]"
               >
-                <Camera className="w-5 h-5 text-white" />
+                <Camera className="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0" />
                 <span>Upload Photos for Free Estimate</span>
               </button>
 
               <button
                 onClick={() => onScrollToSection('calculator')}
-                className="px-5 py-4 rounded-xl bg-[#152c50]/90 hover:bg-[#1c3866] active:scale-[0.99] text-white font-bold text-sm sm:text-base border border-blue-400/30 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl bg-[#152c50]/90 hover:bg-[#1c3866] active:scale-[0.99] text-white font-bold text-xs sm:text-sm md:text-base border border-blue-400/30 transition-all flex items-center justify-center gap-2 cursor-pointer min-h-[48px]"
               >
-                <Calculator className="w-5 h-5 text-amber-400" />
+                <Calculator className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 shrink-0" />
                 <span>Calculate Cost Range</span>
               </button>
 
               <a
                 href={`tel:${SHOP_INFO.phone}`}
-                className="px-4 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 active:scale-[0.99] text-slate-100 hover:text-white font-bold text-sm border border-slate-700 transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-4 py-3.5 sm:py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 active:scale-[0.99] text-slate-100 hover:text-white font-bold text-xs sm:text-sm border border-slate-700 transition-all flex items-center justify-center gap-2 min-h-[48px]"
               >
-                <Phone className="w-4 h-4 text-red-400 fill-red-400" />
+                <Phone className="w-4 h-4 text-red-400 fill-red-400 shrink-0" />
                 <span>(702) 871-0556</span>
               </a>
             </div>

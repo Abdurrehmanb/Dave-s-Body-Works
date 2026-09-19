@@ -125,7 +125,7 @@ export const InsuranceRentalBanner: React.FC<InsuranceRentalBannerProps> = ({ on
               </div>
               <button
                 onClick={onOpenEstimateModal}
-                className="px-4 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl transition-colors inline-flex items-center gap-1.5 shrink-0 uppercase tracking-wider cursor-pointer"
+                className="w-full sm:w-auto min-h-[44px] px-4 py-2.5 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold text-xs rounded-xl transition-colors inline-flex items-center justify-center gap-1.5 shrink-0 uppercase tracking-wider cursor-pointer text-center"
               >
                 <span>Request with Rental</span>
                 <ArrowRight className="w-3.5 h-3.5" />

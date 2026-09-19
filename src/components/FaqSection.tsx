@@ -64,19 +64,19 @@ export const FaqSection: React.FC = () => {
           <p className="text-xs text-slate-500 max-w-lg mx-auto">
             Dave and our technicians are always ready to answer any questions about repair options, parts availability, or insurance claims.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 pt-2">
             <a
               href={`tel:${SHOP_INFO.phone}`}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold transition-colors shadow-xs uppercase tracking-wider"
+              className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold transition-colors shadow-xs uppercase tracking-wider text-center"
             >
-              <Phone className="w-4 h-4 fill-white" />
+              <Phone className="w-4 h-4 fill-white shrink-0" />
               <span>Call (702) 871-0556</span>
             </a>
             <a
               href={`mailto:${SHOP_INFO.email}`}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold transition-colors"
+              className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-300 text-slate-800 text-xs font-bold transition-colors text-center"
             >
-              <Mail className="w-4 h-4 text-red-600" />
+              <Mail className="w-4 h-4 text-red-600 shrink-0" />
               <span>Email Dave Directly</span>
             </a>
           </div>

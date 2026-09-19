@@ -159,17 +159,17 @@ export const LocationHoursSection: React.FC = () => {
                   href={SHOP_INFO.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-3.5 px-4 bg-[#0b1a30] hover:bg-[#152c50] text-white font-bold text-xs rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 min-h-[44px] py-3.5 px-4 bg-[#0b1a30] hover:bg-[#152c50] active:bg-[#071322] text-white font-bold text-xs rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2"
                 >
-                  <Navigation className="w-4 h-4 text-red-500" />
+                  <Navigation className="w-4 h-4 text-red-500 shrink-0" />
                   <span>Open Turn-by-Turn GPS</span>
                 </a>
 
                 <a
                   href={`tel:${SHOP_INFO.phone}`}
-                  className="py-3.5 px-4 bg-red-600 hover:bg-red-700 text-white font-bold text-xs rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 uppercase tracking-wider"
+                  className="min-h-[44px] py-3.5 px-4 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-bold text-xs rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 uppercase tracking-wider"
                 >
-                  <Phone className="w-4 h-4 fill-white" />
+                  <Phone className="w-4 h-4 fill-white shrink-0" />
                   <span>Call Front Desk</span>
                 </a>
               </div>

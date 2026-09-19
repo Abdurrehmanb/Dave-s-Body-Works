@@ -145,7 +145,7 @@ export const EstimateCalculator: React.FC<EstimateCalculatorProps> = ({
                 <span>1. Vehicle Category</span>
                 <span className="text-[11px] font-normal text-slate-500">Affects panel dimensions &amp; paint volume</span>
               </label>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5">
                 {[
                   { id: 'sedan', label: 'Sedan / Coupe', icon: Car },
                   { id: 'suv', label: 'SUV / Crossover', icon: Car },
@@ -159,14 +159,14 @@ export const EstimateCalculator: React.FC<EstimateCalculatorProps> = ({
                       key={item.id}
                       type="button"
                       onClick={() => setVehicleType(item.id as any)}
-                      className={`p-3 rounded-xl border text-center transition-all flex flex-col items-center gap-2 cursor-pointer ${
+                      className={`min-h-[64px] sm:min-h-[72px] p-2.5 sm:p-3 rounded-xl border text-center transition-all flex flex-col items-center justify-center gap-1.5 sm:gap-2 cursor-pointer ${
                         isSelected
                           ? 'border-red-600 bg-red-50 text-[#0b1a30] font-bold ring-2 ring-red-500/20'
                           : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
                       }`}
                     >
-                      <Icon className={`w-5 h-5 ${isSelected ? 'text-red-600' : 'text-slate-400'}`} />
-                      <span className="text-xs">{item.label}</span>
+                      <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${isSelected ? 'text-red-600' : 'text-slate-400'}`} />
+                      <span className="text-[11px] sm:text-xs leading-tight">{item.label}</span>
                     </button>
                   );
                 })}
@@ -394,11 +394,11 @@ export const EstimateCalculator: React.FC<EstimateCalculatorProps> = ({
                   <div className="space-y-2.5 pt-1">
                     <button
                       onClick={handleProceed}
-                      className="w-full py-4 px-4 bg-red-600 hover:bg-red-500 active:bg-red-700 text-white font-extrabold text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider"
+                      className="w-full min-h-[48px] py-3.5 sm:py-4 px-3 sm:px-4 bg-red-600 hover:bg-red-500 active:bg-red-700 text-white font-extrabold text-xs sm:text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider text-center"
                     >
-                      <Camera className="w-4 h-4" />
-                      <span>Lock In &amp; Upload Damage Photos</span>
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <Camera className="w-4 h-4 shrink-0" />
+                      <span className="truncate sm:whitespace-normal">Lock In &amp; Upload Damage Photos</span>
+                      <ArrowRight className="w-4 h-4 shrink-0 ml-0.5" />
                     </button>
 
                     <div className="text-center pt-1">

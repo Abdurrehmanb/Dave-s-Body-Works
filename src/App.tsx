@@ -10,7 +10,6 @@ import { LocationHoursSection } from './components/LocationHoursSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { EstimateModal } from './components/EstimateModal';
-import { FloatingChatWidget } from './components/FloatingChatWidget';
 import { Phone, Camera } from 'lucide-react';
 import { SHOP_INFO } from './data';
 
@@ -113,9 +112,6 @@ export default function App() {
         onOpenEstimateModal={handleOpenEstimateModal}
       />
 
-      {/* Floating Messaging Widget (WhatsApp + Facebook Messenger) */}
-      <FloatingChatWidget />
-
       {/* Free Estimate & Photo Upload Modal */}
       <EstimateModal
         isOpen={isEstimateModalOpen}
@@ -127,7 +123,7 @@ export default function App() {
       <div className="fixed bottom-0 inset-x-0 z-40 bg-[#0b1a30]/95 backdrop-blur-md border-t border-slate-800 p-2.5 sm:hidden flex items-center gap-2 shadow-2xl">
         <a
           href={`tel:${SHOP_INFO.phone}`}
-          className="flex-1 py-3 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-slate-700 active:scale-98 transition-transform"
+          className="flex-1 min-h-[44px] py-3 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-slate-700 active:scale-98 transition-transform"
         >
           <Phone className="w-4 h-4 text-red-500 fill-red-500" />
           <span>Call Shop</span>
@@ -135,7 +131,7 @@ export default function App() {
 
         <button
           onClick={handleOpenEstimateModal}
-          className="flex-1 py-3 px-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-lg shadow-red-600/30 active:scale-98 transition-transform cursor-pointer"
+          className="flex-1 min-h-[44px] py-3 px-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-lg shadow-red-600/30 active:scale-98 transition-transform cursor-pointer"
         >
           <Camera className="w-4 h-4" />
           <span>Free Estimate</span>

@@ -176,11 +176,11 @@ export const ReviewsSection: React.FC = () => {
             href={SHOP_INFO.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-slate-300 hover:border-red-500 text-slate-800 hover:text-red-600 text-xs font-bold shadow-xs transition-colors"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto min-h-[44px] px-5 py-3 rounded-xl bg-white border border-slate-300 hover:border-red-500 text-slate-800 hover:text-red-600 text-xs sm:text-sm font-bold shadow-xs transition-colors text-center"
           >
-            <MessageSquare className="w-4 h-4 text-red-600" />
+            <MessageSquare className="w-4 h-4 text-red-600 shrink-0" />
             <span>Read All 54 Reviews on Google Maps</span>
-            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+            <ExternalLink className="w-3.5 h-3.5 text-slate-400 shrink-0" />
           </a>
         </div>
       </div>

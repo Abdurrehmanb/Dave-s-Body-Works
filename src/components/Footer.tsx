@@ -3,7 +3,6 @@ import {
   Star, 
   MapPin, 
   Phone, 
-  Globe, 
   Clock, 
   ShieldCheck, 
   ArrowUp,
@@ -139,13 +138,6 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenEstimat
                 <Clock className="w-4 h-4 text-slate-400 shrink-0" />
                 <span>Mon – Fri: 8:00 AM – 5:00 PM</span>
               </div>
-
-              <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-slate-400 shrink-0" />
-                <a href={`https://${SHOP_INFO.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                  {SHOP_INFO.website}
-                </a>
-              </div>
             </div>
           </div>
 
@@ -156,7 +148,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenEstimat
             </h4>
             <button
               onClick={onOpenEstimateModal}
-              className="w-full py-3 px-3 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl shadow-xs transition-colors text-center uppercase tracking-wider cursor-pointer flex items-center justify-center gap-1.5"
+              className="w-full min-h-[44px] py-3 px-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold rounded-xl shadow-xs transition-colors text-center uppercase tracking-wider cursor-pointer flex items-center justify-center gap-1.5"
             >
               <Calculator className="w-4 h-4" />
               <span>Free Estimate</span>
@@ -165,7 +157,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenEstimat
               href={SHOP_INFO.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full py-2.5 px-3 bg-[#0b1a30] hover:bg-[#152c50] text-slate-200 text-xs font-medium rounded-xl border border-slate-700 transition-colors text-center"
+              className="w-full min-h-[44px] py-3 px-3 bg-[#0b1a30] hover:bg-[#152c50] active:bg-slate-950 text-slate-200 text-xs font-medium rounded-xl border border-slate-700 transition-colors text-center flex items-center justify-center"
             >
               Get Directions
             </a>
